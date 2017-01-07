@@ -1,1 +1,6 @@
 /* Select 100 rows from the orders table */
+
+SELECT *
+FROM orders
+order by id
+LIMIT 100;
