@@ -1,0 +1,28 @@
+
+select *
+from orders
+order by id
+limit 100
+
+/* Most dates in databases are timestamps */
+
+/* select dates from timestamps */
+
+select date(ordered_at)
+from orders
+order by 1
+limit 100;
+
+/* find the total count 
+
+select count(1)
+from users;
+
+*/
+
+/* count orders by their date */
+
+select date(ordered_at), count(1)
+from orders
+group by 1
+order by 1;
