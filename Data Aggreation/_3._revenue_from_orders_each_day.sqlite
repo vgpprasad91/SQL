@@ -1,0 +1,26 @@
+
+/* write a code to select 100 rows from the orders table */
+
+select *
+from orders 
+order by id
+limit 100;
+
+/* write a code to select only date from the timestamp coulmn */
+
+select date(ordered_at)
+from orders
+order by 1
+limit 100;
+
+/* write a code to find the daily count of the orders per day */
+
+select date(ordered_at), count(1)
+from orders
+group by 1
+order by 1;
+
+/* write a code to find the revenue from the orders per day */
+
+/* Join the order_items table because that table has an amount_paid column representing revenue */
+
