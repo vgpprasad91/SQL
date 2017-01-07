@@ -4,3 +4,10 @@ SELECT *
 FROM orders
 order by id
 LIMIT 100;
+
+/* Select all columns in the order items table */
+
+SELECT *
+FROM order_items
+order by id
+LIMIT 100;
