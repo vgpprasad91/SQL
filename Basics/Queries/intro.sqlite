@@ -1,1 +1,45 @@
 
+/* In this lesson, we will learn querying a database with one table named movies */
+
+/* Take a look at the name and imdb rating of every movie in the database */
+
+SELECT name, imdb_rating FROM movies;
+
+/* Select all the distinct values in a column */
+
+SELECT DISTINCT genre FROM movies;
+
+/* Filter the results of a query using a WHERE clause */
+
+SELECT * FROM movies WHERE imdb_rating > 8;
+
+/* Filter the results by searching for a specific pattern in a column */
+
+SELECT * FROM movies WHERE name LIKE 'Se_en';
+
+/* % is a wildcard character that can be used with like */
+
+SELECT * FROM movies WHERE name LIKE 'a%';
+
+/*  a% - matches all the strings that begin with a 
+    %a - matches all the strings that end with a */
+    
+/* BETWEEN is another special character that can be used in a where clause */
+
+SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000;
+
+/* Return all the comedy movies between 1990 and 2000 */
+
+SELECT * FROM movies WHERE year BETWEEN 1990 AND 2000 AND genre = 'comedy';
+
+/* OR operator */
+
+SELECT * FROM movies WHERE genre = 'comedy' OR year < 1980;
+
+/* List the data in a particular order */
+
+SELECT * FROM movies ORDER BY imdb_ratings DESC;
+
+/* Limit the result to 3 lowest rated movies */
+
+SELECT * FROM movies ORDER BY imdb_rating ASC LIMIT 3;
